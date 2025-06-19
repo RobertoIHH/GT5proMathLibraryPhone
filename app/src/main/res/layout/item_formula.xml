@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/tvFormulaTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ecuación Cuadrática"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary_light" />
+
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/btn_star_big_off"
+                android:contentDescription="Favorito"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+
+        <!-- Meta Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:id="@+id/tvFormulaCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Álgebra"
+                android:textSize="12sp"
+                android:background="#E3F2FD"
+                android:textColor="#1976D2"
+                android:padding="4dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvFormulaType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📐 LaTeX"
+                android:textSize="12sp"
+                android:background="#F3E5F5"
+                android:textColor="#7B1FA2"
+                android:padding="4dp"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvFormulaDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15/12/2024"
+                android:textSize="10sp"
+                android:textColor="@color/text_secondary_light" />
+
+        </LinearLayout>
+
+        <!-- Content -->
+        <TextView
+            android:id="@+id/tvFormulaContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/text_secondary_light"
+            android:background="#F8F8F8"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvFormulaDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solución general para ecuaciones de segundo grado"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary_light"
+            android:fontStyle="italic"
+            android:layout_marginBottom="6dp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Tags -->
+        <TextView
+            android:id="@+id/tvFormulaTags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#cuadrática • #solución • #raíces"
+            android:textSize="10sp"
+            android:textColor="#666"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_edit"
+                android:contentDescription="@string/edit"
+                android:layout_marginEnd="8dp" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_delete"
+                android:contentDescription="@string/delete" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
