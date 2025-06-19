@@ -5,11 +5,20 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
+        // CRÍTICO: Repositorio Huawei DEBE ir primero
+        maven {
+            url = uri("https://developer.huawei.com/repo/")
+            isAllowInsecureProtocol = true
+        }
         google()
         mavenCentral()
+        maven {
+            url = uri("https://jitpack.io")
+        }
     }
 }
 
